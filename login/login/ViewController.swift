@@ -17,14 +17,14 @@ class ViewController: UIViewController {
     // Tamanho padrão dos campos de texto
     let textFieldWidth: CGFloat = 250.0
     
-    let logoImageView: UIImageView = {
+    private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "logo")) // Substitua "logo" pelo nome da sua imagem
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    let usernameTextField: UITextField = {
+    private lazy var usernameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Username"
         textField.borderStyle = .roundedRect
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         return textField
     }()
     
-    let passwordTextField: UITextField = {
+    private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Password"
         textField.isSecureTextEntry = true
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         return textField
     }()
     
-    let loginButton: UIButton = {
+    private lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Login", for: .normal)
         button.backgroundColor = UIColor.appBlue
